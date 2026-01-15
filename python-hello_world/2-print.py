@@ -1,1 +1,1 @@
-print("Hello , World!")
+print("\"Programming is like building a multilingual puzzle")
