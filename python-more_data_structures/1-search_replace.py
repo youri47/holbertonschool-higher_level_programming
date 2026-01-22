@@ -3,5 +3,5 @@
 
 
 def search_replace(my_list, search, replace):
-    """Remplace toutes les occurrences de search par replace dans une nouvelle liste"""
+    """Remplace les occurrences de search par replace"""
     return [replace if x == search else x for x in my_list]
