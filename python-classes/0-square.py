@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Module qui définit une classe Square"""
+"""Module qui définit une classe Square."""
 
 
 class Square:
-    """Classe vide qui définit un carré"""
+    """Classe qui définit un carré."""
     pass
