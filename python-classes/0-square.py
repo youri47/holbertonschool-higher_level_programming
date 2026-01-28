@@ -1,7 +1,11 @@
-#!/usr/bin/env python3
-"""Module qui définit une classe Square."""
+#!/usr/bin/python3
+"""
+This is an empty class Square that defines a square.
+"""
 
 
 class Square:
-    """Classe qui définit un carré."""
+    """
+    An empty class that defines a square.
+    """
     pass
