@@ -1,36 +1,32 @@
 #!/usr/bin/python3
-"""Module qui définit une classe Rectangle avec validation"""
+"""
+This is a class Rectangle that defines a rectangle by width and height.
+"""
 
 
 class Rectangle:
-    """Classe qui représente un rectangle avec largeur et hauteur"""
-
+    """
+    A class that defines a rectangle by its width and height.
+    """
     def __init__(self, width=0, height=0):
-        """Initialise un rectangle avec largeur et hauteur
-        
+        """
+        Initializes a new Rectangle instance.
+
         Args:
-            width (int): largeur du rectangle (défaut: 0)
-            height (int): hauteur du rectangle (défaut: 0)
+            width (int): The width of the rectangle (default 0).
+            height (int): The height of the rectangle (default 0).
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Récupère la largeur du rectangle"""
+        """Getter for the width of the rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Définit la largeur du rectangle avec validation
-        
-        Args:
-            value (int): nouvelle largeur
-            
-        Raises:
-            TypeError: si value n'est pas un entier
-            ValueError: si value est négatif
-        """
+        """Setter for the width of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -39,20 +35,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """Récupère la hauteur du rectangle"""
+        """Getter for the height of the rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Définit la hauteur du rectangle avec validation
-        
-        Args:
-            value (int): nouvelle hauteur
-            
-        Raises:
-            TypeError: si value n'est pas un entier
-            ValueError: si value est négatif
-        """
+        """Setter for the height of the rectangle."""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
