@@ -1,15 +1,82 @@
 #!/usr/bin/python3
-"""
-This module defines a class MyList that inherits from list.
-"""
+"""This module defines a class MyList that inherits from list."""
+
 
 class MyList(list):
-    """
-    A class that extends the built-in list.
-    """
+    """A class that extends the built-in list."""
 
     def print_sorted(self):
-        """
-        Prints the list in ascending sorted order.
-        """
+        """Prints the list in ascending sorted order."""
         print(sorted(self))
+```
+
+---
+
+## Fichier `tests/1-my_list.txt`
+```
+The ``1-my_list`` module
+=========================
+
+Using ``MyList``
+----------------
+
+Importing the class:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Checking class type:
+
+    >>> my_list = MyList()
+    >>> type(my_list)
+    <class '1-my_list.MyList'>
+
+Checking inheritance:
+
+    >>> isinstance(my_list, list)
+    True
+
+Empty list:
+
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+Normal case:
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Negative numbers:
+
+    >>> my_list = MyList()
+    >>> my_list.append(-1)
+    >>> my_list.append(-4)
+    >>> my_list.append(2)
+    >>> my_list.print_sorted()
+    [-4, -1, 2]
+
+Already sorted:
+
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.print_sorted()
+    [1, 2, 3]
+
+One element:
+
+    >>> my_list = MyList()
+    >>> my_list.append(5)
+    >>> my_list.print_sorted()
+    [5]
