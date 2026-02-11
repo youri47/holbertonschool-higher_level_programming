@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"""Module qui lit un fichier texte"""
+"""
+Function that reads a UTF8 text file and prints it to stdout.
+"""
 
 
 def read_file(filename=""):
-    """Lit un fichier texte UTF-8 et l'affiche sur stdout"""
+    """Reads and prints the content of a file."""
     with open(filename, encoding="utf-8") as f:
         print(f.read(), end="")
