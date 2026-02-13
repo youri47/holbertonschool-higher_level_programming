@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-"""Module qui sauvegarde un objet dans un fichier JSON"""
+"""writes an Object to a text file, using a JSON representation"""
+
 import json
 
 
 def save_to_json_file(my_obj, filename):
-    """Écrit un objet dans un fichier texte en utilisant une représentation JSON"""
-    with open(filename, mode="w", encoding="utf-8") as f:
-        json.dump(my_obj, f)
+    """Serialize an object to JSON and save it to a text file."""
+    with open(filename, 'w', encoding='utf-8') as f:
+        json_string = json.dumps(my_obj)
+        f.write(json_string)
