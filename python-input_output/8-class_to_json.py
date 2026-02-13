@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-"""Module qui retourne la description d'un objet pour la sérialisation JSON"""
+""" My class module
+"""
 
+class MyClass:
+    """ My class
+    """
 
-def class_to_json(obj):
-    """Retourne le dictionnaire description d'un objet pour la sérialisation JSON"""
-    return obj.__dict__
+    def __init__(self, name):
+        self.name = name
+        self.number = 0
+
+    def __str__(self):
+        return "[MyClass] {} - {:d}".format(self.name, self.number)
