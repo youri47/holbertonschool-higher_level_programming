@@ -1,14 +1,12 @@
 #!/usr/bin/python3
-""" My class module
-"""
+MyClass = __import__('8-my_class_2').MyClass
+class_to_json = __import__('8-class_to_json').class_to_json
 
-class MyClass:
-    """ My class
-    """
+m = MyClass("John")
+m.win()
+print(type(m))
+print(m)
 
-    def __init__(self, name):
-        self.name = name
-        self.number = 0
-
-    def __str__(self):
-        return "[MyClass] {} - {:d}".format(self.name, self.number)
+mj = class_to_json(m)
+print(type(mj))
+print(mj)
