@@ -1,20 +1,18 @@
 #!/usr/bin/python3
-"""
-model_city.py
-Defines the City class which maps to the cities table in the database.
-"""
-from sqlalchemy import Column, Integer, String, ForeignKey
+"""Contains the class definition of a State and Base instance."""
+
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from model_state import Base, State
 
 Base = declarative_base()
 
 
-class City(Base):
-    """Class that defines the City table."""
+class State(Base):
+    """State class that links to MySQL table states."""
 
-    __tablename__ = 'cities'
-
-    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
+    __tablename__ = 'states'
+    id = Column(
+        Integer, primary_key=True, nullable=False,
+        autoincrement=True, unique=True
+    )
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, ForeignKey(State.id), nullable=False)
